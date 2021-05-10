@@ -17,6 +17,8 @@ tar -zxvf gromacs-2021.2.tar.gz
 cd gromacs-*
 mkdir build
 cd build
+# loading intel paths to compile the model 
+source ../config_intel.sh 
 FLAGS="-xCORE-AVX2 " and -DGMX_SIMD=AVX2_256
 cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON -DGMX_MPI=on -DGMX_GPU=on -DGMX_FFT_LIBRARY=mkl -DGMX_SIMD=AVX2_256
 make 
