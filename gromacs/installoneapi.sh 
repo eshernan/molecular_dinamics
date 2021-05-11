@@ -9,4 +9,5 @@ repo_gpgcheck=1
 gpgkey=https://yum.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB
 EOF
 sudo mv /tmp/oneAPI.repo /etc/yum.repos.d
-sudo  yum install intel-hpckit
+#specific version to avoid incompatibility with licency api
+sudo yum install -y intel-oneapi-common-licensing-2021.2.0 intel-hpckit intel-oneapi-libdpstd-devel-2021.2.0
