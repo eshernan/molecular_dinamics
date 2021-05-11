@@ -1,14 +1,14 @@
 #!/bin/sh
 source ../setup-env.sh
 
-if [ ! -d "$BASE_PATH" ]; then 
+if [ ! -d $BASE_PATH ]; then 
     mkdir $BASE_PATH
 fi
-if [ ! -d "$GROMACS_INSTALLER" ]; then 
+if [ ! -d $GROMACS_INSTALLER ]; then 
     mkdir $GROMACS_INSTALLER
 fi
 
-if [ ! -d "$INSTALLER_PATH" ]; then 
+if [ ! -d $INSTALLER_PATH ]; then 
     mkdir $INSTALLER_PATH
 fi
 cd $GROMACS_INSTALLER
