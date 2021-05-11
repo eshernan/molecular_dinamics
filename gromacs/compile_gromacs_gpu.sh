@@ -16,7 +16,9 @@ cd $GROMACS_INSTALLER
 source $BASE_REPO/download.sh 
 tar -zxvf gromacs-2021.2.tar.gz
 cd gromacs-*
-mkdir build
+if [ ! -d build ]; then 
+    mkdir build
+fi
 cd build
 FLAGS="-xCORE-AVX2  -g -static-intel"; 
 CFLAGS=$FLAGS CXXFLAGS=$FLAGS CC=mpiicc CXX=mpiicpc 
