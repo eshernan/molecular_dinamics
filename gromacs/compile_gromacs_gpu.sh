@@ -11,7 +11,7 @@ fi
 if [ ! -d $INSTALLER_PATH ]; then 
     mkdir $INSTALLER_PATH
 fi
-source ../config_intel
+source ../config_intel.sh
 export BASE_REPO=$PWD
 cd $GROMACS_INSTALLER
 
